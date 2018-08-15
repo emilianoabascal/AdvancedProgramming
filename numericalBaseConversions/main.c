@@ -22,6 +22,7 @@ int main(int argc, char **argv) {
 				for(i = optind; i <= argc-1; i++){
 					fromAnyBaseToDecimal(argv[i], base1, base2);
 				}
+				//free(base1);
 				break;
 			case '?':
 				if (optopt == 'o'){

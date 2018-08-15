@@ -34,27 +34,26 @@ void fromDecimalToOtherBases(int number, char *base){
 	int n = number;
 	int b = atoi(base);
 	int i = 0;
+	char *m;
 	while(n/b != 0){
 		i++;
 		n = n/b;
 	}
-	
-	char m[i];
-	for(i = 0; i<sizeof(m);i++){
+	m = (char*)calloc(i, sizeof(char*));
+		
+	for(int j = 0; j < i; j++){
 		if(atoi(base) > 9){
-			m[i] = number%b +'0';
+			m[j] = number%b +'0';
 		}else{
-			m[i] = number%b +'0';
+			m[j] = number%b +'0';
 		}
 		number = number/b;
-		
 	}
-
-	m[i] = number%b+'0';
 	
+	m[i] = number%b+'0';
 	m[i+1] = '\0'; 
+	
 	for(int j = i; j >= 0;j--){
-		
 		if(m[j] > 57){
 			printf("%c", m[j] + '\a');//Bell Character
 		}else{
@@ -62,6 +61,7 @@ void fromDecimalToOtherBases(int number, char *base){
 		}
 	}
 	printf("\n");
+	free(m);
 }
 
 
