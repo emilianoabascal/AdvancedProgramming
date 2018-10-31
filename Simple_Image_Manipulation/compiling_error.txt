@@ -1,0 +1,13 @@
+Undefined symbols for architecture x86_64:
+  "_freeMemory", referenced from:
+      _main in main-576988.o
+  "_negativeOfImage", referenced from:
+      _main in main-576988.o
+  "_readImage", referenced from:
+      _main in main-576988.o
+  "_scaleImage", referenced from:
+      _main in main-576988.o
+  "_writeImage", referenced from:
+      _main in main-576988.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
