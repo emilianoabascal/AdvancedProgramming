@@ -1,2 +1,0 @@
--compilar: gcc PROGRAMA -o Programa -Wall
--compilar2: gcc PROGRAMA -E -o prueba.i -DEBUG
